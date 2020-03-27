@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: as.re.TestApi
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.651 sec <<< FAILURE!
+test(as.re.TestApi)  Time elapsed: 0.224 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: org/apache/commons/logging/LogFactory
+	at org.apache.http.conn.ssl.AbstractVerifier.<init>(AbstractVerifier.java:60)
+	at org.apache.http.conn.ssl.AllowAllHostnameVerifier.<init>(AllowAllHostnameVerifier.java:43)
+	at org.apache.http.conn.ssl.AllowAllHostnameVerifier.<clinit>(AllowAllHostnameVerifier.java:45)
+	at org.apache.http.conn.ssl.SSLSocketFactory.<clinit>(SSLSocketFactory.java:151)
+	at io.restassured.config.SSLConfig.<init>(SSLConfig.java:184)
+	at io.restassured.config.RestAssuredConfig.<init>(RestAssuredConfig.java:41)
+	at io.restassured.RestAssured.<clinit>(RestAssured.java:420)
+	at as.re.TestApi.test(TestApi.java:14)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.logging.LogFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 41 more
+
